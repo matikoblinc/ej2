@@ -1,9 +1,9 @@
 <?php 
 
-danios = array("golpe" => 10, "patada" => 20, "espadazo" => 50);
-
 function calcularDanio($vida, $ataque, $pocion){
+    $danios = array("golpe" => 10, "patada" => 20, "espadazo" => 50);
     $danio = $danio[$ataque]
+
     if ($vida < 50 && $pocion == "3")
     {
         $danio * 2;
@@ -19,7 +19,7 @@ function calcularDanio($vida, $ataque, $pocion){
 }
 
 function calcularVida($vida, $ataque, $pocion){
-    //...
+    $vida = $vida - calcularDanio($vida, $ataque, $pocion);
 }
 
 ?>

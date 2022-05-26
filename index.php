@@ -21,9 +21,9 @@
         </select>
         </p> 
         <p>
-    <input type= "radio" value= "1" name= "Posion de veneno">Posion de veneno </br>
-    <input type= "radio" value= "2" name= "Posion de fuego">Posion de fuego </br>
-    <input type= "radio" value= "3" name= "Posion de adormesimiento">Posion de adormesimiento</br>
+    <input type= "radio" value= "1" name= "Pocion">Pocion de veneno </br>
+    <input type= "radio" value= "2" name= "Pocion">Pocion de fuego </br>
+    <input type= "radio" value= "3" name= "Pocion">Pocion de adormesimiento</br>
 </p>
 <p>
     <button type = "submit">calcular</button>
@@ -31,7 +31,7 @@
     </form>
     <?php
         if(isset($_POST["ataque"])){
-           
+           echo calcularDanio ($_POST = ["vida"], $_POST = ["ataque"], $_POST = ["Pocion"])
         }
     ?>
 </body>
