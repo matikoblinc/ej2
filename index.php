@@ -10,7 +10,7 @@
 </head>
 <body>
     <h2>Calculadora de daño</h2>
-    <form action="./calculadora" method="POST">
+    <form action="./index.php" method="POST">
     <input type="number" name="vida">
 </br>
 <p>Seleccione el tipo de ataque:
@@ -21,17 +21,18 @@
         </select>
         </p> 
         <p>
-    <input type= "radio" value= "1" name= "Pocion">Pocion de veneno </br>
-    <input type= "radio" value= "2" name= "Pocion">Pocion de fuego </br>
-    <input type= "radio" value= "3" name= "Pocion">Pocion de adormesimiento</br>
+    <input type= "radio" value= "1" name= "pocion">Pocion de veneno </br>
+    <input type= "radio" value= "2" name= "pocion">Pocion de fuego </br>
+    <input type= "radio" value= "3" name= "pocion">Pocion de adormecimiento</br>
 </p>
 <p>
-    <button type = "submit">calcular</button>
+    <input type = "submit" value="Calcular">
 </p>
     </form>
     <?php
-        if(isset($_POST["ataque"])){
-           echo calcularDanio ($_POST = ["vida"], $_POST = ["ataque"], $_POST = ["Pocion"])
+        if(isset($_POST["ataque"]))
+        {
+           echo ("<h3> La cantidad de vida restante es: " . calcularVida($_POST["vida"], $_POST["ataque"], $_POST["pocion"] . "</h3>"));
         }
     ?>
 </body>
